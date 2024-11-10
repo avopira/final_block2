@@ -1,0 +1,7 @@
+cats
+dogs
+hamsters
+
+horses
+camels
+donkeys

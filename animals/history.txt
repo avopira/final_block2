@@ -1,0 +1,50 @@
+  450  git clone github.com/avopira/final_block2
+  451  git clone https://github.com/avopira/final_block2
+  452  cd final_block2
+  453  git add pets.txt
+  454  nano pets.txt
+  455  cat pets.txt
+  456  cat > pets.txt
+  457  mv final_block2 > pets.txt
+  458  mv --help
+  459  cd ..
+  460  cd final_block2
+  461  nano pets.txt
+  462  cat > pack_animals.txt
+  463  cat pets.txt pack_animals > humans_friends.txt
+  464  cat pets.txt pack_animals.txt > humans_friends.txt
+  465  mkdir animals
+  466  mv human_friends.txt animals/
+  467  mv humans_friends.txt animals/
+  468  ls
+  469  cd animals
+  470  ls
+  471  nano humans_
+  472  nano humans_friends.txt
+  473  sudo apt update
+  474  sudo apt install wget gnupg
+  475  wget https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+  476  sudo dpkg -i mysql-apt-config_0.8.17-1_all.deb
+  477  cd mysql_client
+  478  sudo apt update
+  479  sudo apt install mysql-client
+  480  cd mysql_client
+  481  mysql --version
+  482  ls
+  483  histoy 30
+  484  history 30
+  485  sudo dpkg -r mysql-client.deb
+  486  sudo dpkg -r --mysql-client
+  487  sudo dpkg -r --mysql-client -f
+  488  sudo dpkg -r mysql-client -f
+  489  sudo dpkg -r mysql-client
+  490  ls
+  491  sudo dpkg -r --purge  mysql-client
+  492  sudo dpkg -r mysql-apt-config
+  493  ls
+  494  sudo dpkg -r --purge mysql-apt-config
+  495  sudo dpkg -r mysql-apt-config -f
+  496  sudo dpkg --purge mysql-apt-config
+  497  ls
+  498  dpkg -l | grep mysql-apt-config
+  499  history 50 > history.txt
