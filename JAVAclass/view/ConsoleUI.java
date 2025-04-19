@@ -27,7 +27,7 @@ public class ConsoleUI implements View {
 
     @Override
     public void start() {
-        System.out.println("\nHello!");
+        System.out.println("\nHi! Tell me what you want to do");
         while (check){
             printMenu();
             scanMenu();
@@ -124,7 +124,7 @@ public class ConsoleUI implements View {
             }
         }
 
-        System.out.println("Bye-bye");
+        System.out.println("See you!");
         check = false;
     }
 

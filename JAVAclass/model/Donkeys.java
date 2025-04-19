@@ -1,5 +1,7 @@
+package model;
+
 public class Donkeys extends PackAnimals {
-    public Conkeys() {
+    public Donkeys() {
         super();
     }
 }    

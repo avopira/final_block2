@@ -37,9 +37,9 @@ public class MainMenu {
 
     public String print(){
         StringBuilder sb = new StringBuilder();
-        sb.append("\nList of commands:\n");
+        sb.append("\nChoose a number from a list of commands below:\n");
         for (int i = 0; i < commandsList.size(); i++) {
-            sb.append(String.format("%02d", (i + 1)))
+            sb.append(i + 1)
                     .append(". ")
                     .append(commandsList.get(i).getDescription())
                     .append("\n");

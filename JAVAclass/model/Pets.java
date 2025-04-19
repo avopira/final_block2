@@ -3,29 +3,26 @@ package model;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class PackAnimals {
-    private Map<Integer, String> packAnimals = new HashMap<>();
-    // private Integer id;
-    // private String description;
+public abstract class Pets {
+    private Map<Integer, String> pets = new HashMap<>();
     private Integer animalId;
     private String animalDescription;
-    private static final String petType = "packAnimals";
+    private static final String petType = "Pets";
 
-    public PackAnimals() {
-        packAnimals.put(1, "Horses");
-        packAnimals.put(2, "Camels");
-        packAnimals.put(3, "Donkeys");
-
+    public Pets() {
+        pets.put(1, "Dogs");
+        pets.put(2, "Cats");
+        pets.put(3, "Hamsters");
     }  
 
-     public String printPackAnimals(){
+     public String printPets(){
         StringBuilder sb = new StringBuilder();
         Animals animals = new Animals();
         animalId = animals.getIdByDescription(petType);
         animalDescription = animals.getDescriptionByID(animalId);
 
-        sb.append("Pack animals: \n");
-        for (Map.Entry<Integer, String> entry : packAnimals.entrySet()) {
+        sb.append("Pets: \n");
+        for (Map.Entry<Integer, String> entry : pets.entrySet()) {
 
             sb.append("id: ").append(entry.getKey()).append(", description: ").append(entry.getValue()).append(", ")
                     .append("animalId: ").append(animalId).append(", description: ").append(animalDescription).append("\n");
@@ -33,19 +30,19 @@ public abstract class PackAnimals {
         return sb.toString();
     }
 
-    public void addNewAnimalType(String description) {
+    public void addNewPetType(String description) {
         int maxKey = -1;
-        for(int key: packAnimals.keySet()) {
+        for(int key: pets.keySet()) {
             if (key > maxKey) {
                 maxKey = key;
             }
         }
-        packAnimals.put(maxKey + 1, description);
+        pets.put(maxKey + 1, description);
     }
 
-    public void removePackAnimalsType(String description) {
+    public void removePetType(String description) {
         Integer keyToRemove = null;
-        for(Map.Entry<Integer, String> entry : packAnimals.entrySet()) {
+        for(Map.Entry<Integer, String> entry : pets.entrySet()) {
             if(entry.getValue().equals(description)) {
                 keyToRemove = entry.getKey();
                 break;
@@ -53,15 +50,15 @@ public abstract class PackAnimals {
         }
 
         if(keyToRemove == null) {
-            throw new IllegalArgumentException("There is no specified pack animal type");
+            throw new IllegalArgumentException("There is no specified pet type");
         } else {
-            packAnimals.remove(keyToRemove);
+            pets.remove(keyToRemove);
         }
     }
 
     public Integer getID(String description) {
         int id = -1;
-        for(Map.Entry<Integer, String> entry : packAnimals.entrySet()) {
+        for(Map.Entry<Integer, String> entry : pets.entrySet()) {
             if(entry.getValue().equals(description)) {
                 id = entry.getKey();
                 break;
@@ -71,21 +68,21 @@ public abstract class PackAnimals {
     }
 
     public String getDescriptionByID(Integer id) {
-        return packAnimals.get(id);
+        return pets.get(id);
     }
 
-    public Map<Integer, String> getPackAnimalsList() {
-        return packAnimals;
+    public Map<Integer, String> getPetsList() {
+        return pets;
     }
 
-    public String printPackAnimalsTypes() {
+    public String printPetTypes() {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < packAnimals.size(); i++) {
-            if (i < packAnimals.size() -1 ) {
-                sb.append(packAnimals.get(i+1)).append(", ");
+        for (int i = 0; i < pets.size(); i++) {
+            if (i < pets.size() -1 ) {
+                sb.append(pets.get(i+1)).append(", ");
             } else {
-                sb.append(packAnimals.get(i+1));
+                sb.append(pets.get(i+1));
             }
         }
 
